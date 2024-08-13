@@ -3,10 +3,10 @@ import YourBotArmy from "./YourBotArmy";
 import BotCollection from "./BotCollection";
 
 function BotsPage() {
-  //start here with your code for step one
+  
   const [bots, setBots] = useState([]);
 
-  //fetch data 
+  
   useEffect(()=>{
     fetch(`https://json-server-vercel-rho-ebon.vercel.app/bots`)
     .then(res => res.json())
@@ -14,16 +14,10 @@ function BotsPage() {
       setBots(data)})
 
   },[]);
-//display selected bots
   function castBot(id,cast=true){
     setBots(bots.map(bot => id === bot.id ? {...bot, isCast:cast}  : bot))
   } 
 
-  // function unCastBot(id){
-  //   setBots(bots.map(bot => id === bot.id ? {...bot, isCast:false}  : bot))
-  // } 
-  
-//discharge a bot completely
 function deleteBot(id) {
   setBots(bots.filter(bot => id !== bot.id))
 }
