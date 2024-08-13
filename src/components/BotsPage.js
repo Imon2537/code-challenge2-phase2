@@ -8,7 +8,7 @@ function BotsPage() {
 
   //fetch data 
   useEffect(()=>{
-    fetch(`http://localhost:3000/bots`)
+    fetch(`https://json-server-vercel-rho-ebon.vercel.app/bots`)
     .then(res => res.json())
     .then(data => {
       setBots(data)})
