@@ -53,13 +53,13 @@ function BotSpecs({bot}) {
             </div>
             <button
               className="ui button fluid"
-              // onClick={() =>handleClick(bot.id)}
+              
             >
               Go Back
             </button>
             <button
               className="ui button fluid"
-              // onClick={() => handleClick(bot.id)}
+              
             >
               Enlist
             </button>
